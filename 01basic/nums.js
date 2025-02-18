@@ -25,7 +25,17 @@ console.log(Math.floor(4.4444));  //4
 
 console.log(Math.min(4, 5, 6, 7));
 console.log(Math.max(4, 5, 6, 7));
-console.log(Math.random());
+
+
+
+console.log(Math.random());  //provide value between (0 - 1)
+
+
+const min = 10;
+const max = 20;
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
 
 
 
