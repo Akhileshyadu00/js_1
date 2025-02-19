@@ -33,14 +33,55 @@ const array1 = new Array(1,2,3,4,5);
 
 //Splice, slice
 
-console.log("A", array1);
+//console.log("A", array1);
 const new1 = array1.slice(1, 3);  //start from 1 to 2, not include 3rd index
-console.log(new1);
-console.log("B", array1);
+//console.log(new1);
+//console.log("B", array1);
 
 const new2 = array1.splice(1, 3);  // add last index also
-console.log("C", array1);
-console.log(new2);
+//console.log("C", array1);
+//console.log(new2);
+
+
+const num = [0, 1, 2, 3, 4, 5,6];
+const alpha = ["one", "two", "three"];
+
+//num.push(alpha);  array inside array
+//console.log(num);
+
+const all = num.concat(alpha);   //return new array
+//console.log(all);
+
+const allnew = [...num, ...alpha]
+//console.log(allnew);
+
+
+const another = [1, 2, 3, [4, 5, 6, 7], 7, [6, 7],[4,5]]
+const real = another.flat(Infinity);
+//console.log(real);
+
+
+//console.log(Array.isArray("akhilesh"));
+//console.log(Array.from("Akhilesh")); 
+//console.log(Array.from({name: "Akhilesh"}));  //interesting
+
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
+
+//console.log(Array.of(score1, score2, score3));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
