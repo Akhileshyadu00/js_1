@@ -6,9 +6,18 @@ const course  = {
 
 //course.teacher()
 
-const {teacher} = course
+//const {teacher} = course
 //console.log(teacher);
 
-const navbar = () => {
+//const navbar = ({company}) => {
     
+//}
+
+
+// API ---> JSON
+
+{
+    "name" = "Akjilesh" 
+    "courseName" = "youtube"
+   " price" = "999"
 }
