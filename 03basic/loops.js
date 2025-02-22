@@ -40,20 +40,52 @@ for (let index = 0; index < heros.length; index++) {
 
 for (let index = 1; index < 20; index++) {
     if (index == 5) {
-        console.log(`5 detected`);
+       //console.log(`5 detected`);
         //console.log(`value of index is ${index}`);
         break
     }
-   console.log(`value of index is ${index}`); 
+   //console.log(`value of index is ${index}`); 
 }
 
 
 
 for (let index = 1; index < 20; index++) {
     if (index == 5) {
-        console.log(`5 detected`);
+        //console.log(`5 detected`);
         //console.log(`value of index is ${index}`);
        continue
     }
-   console.log(`value of index is ${index}`); 
+   //console.log(`value of index is ${index}`); 
 }
+
+
+
+// while 
+
+let index = 0
+
+while (index <= 10) {
+    //console.log(`value of index ${index}`); 
+    index = index + 2
+}
+
+
+
+let user = ["a", "b", "c"]
+
+let arr = 0
+while (arr < user.length) {
+    //console.log(`value is ${user[arr]}`);  
+    arr = arr +1
+}
+
+
+// Do ... while
+
+let score = 11
+
+do {
+    console.log(`Score is ${score}`);
+    score ++;
+    
+} while (score <=10);
