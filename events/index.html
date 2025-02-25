@@ -18,4 +18,30 @@
     </div>
     
 </body>
+<Script>
+    //document.getElementById("").onclick = () => {
+    //    alert("hello")
+    //}
+
+    document.getElementById("").addEventListener("click", (e) => {
+        alert("hello again")
+       // e.stopPropagation()
+        // e.preventDefault() 
+    }, false) //default false
+    
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // ClientX,Y,Z,   screenX,Y
+    // altkey, ctrlkey, shiftkey, keycode
+
+    //EventPropogation --> Capturing & Bubling --> first inside, then outside elements
+    //fixed by true (false by default)
+
+
+    //attachEvent()
+    //jQuery - .onEvent Listener
+
+
+</Script>
 </html>
