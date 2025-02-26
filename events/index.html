@@ -8,12 +8,13 @@
 <body style="background-color: rgb(26, 24, 24); color: aliceblue;">
     <h2>Images</h2>
     <div>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul id="images">
+            <li><img width="200px" height="200px" id="one" src="https://images.pexels.com/photos/30832946/pexels-photo-30832946/free-photo-of-cozy-tea-setting-with-lemons-and-yellow-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="one"></li>
+            <li><img width="200px" height="200px" id="two" src="https://images.pexels.com/photos/30854148/pexels-photo-30854148/free-photo-of-bright-yellow-wooden-door-with-lock-handle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="two"></li>
+            <li><img width="200px" height="200px" id="three" src="https://images.pexels.com/photos/11911869/pexels-photo-11911869.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="three"></li>
+            <li><img width="200px" height="200px" id="four" src="https://images.pexels.com/photos/28142479/pexels-photo-28142479/free-photo-of-a-door-with-a-brass-handle-and-glass.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="four"></li>
+            <li><img width="200px" height="200px" id="five" src="https://images.pexels.com/photos/24837730/pexels-photo-24837730/free-photo-of-view-of-a-door.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="five"></li>
+            <li><a style="color: aliceblue; "href="https://www.google.com/" id="google">Google</a></li>
         </ul>
     </div>
     
@@ -23,17 +24,52 @@
     //    alert("hello")
     //}
 
-    document.getElementById("").addEventListener("click", (e) => {
-        alert("hello again")
-       // e.stopPropagation()
+   
+
+    //document.getElementById("images").addEventListener( "click", (e) => {
+       // console.log("click inside images");
+        
+    //}, false)
+
+
+    document.getElementById("four").addEventListener("click", (e) => {
+        console.log("click inside four");
+        e.stopPropagation();
+        
+        //alert("hello again")
+        
         // e.preventDefault() 
 
        // console.log(e.target.parentNode);
-       let removeIt = e.target.parentNode
+       //let removeIt = e.target.parentNode
        // removeIt.remove()
        // removeIt.parentNode.removeChild(removeIt)
         
     }, false) //default false
+
+    document.getElementById("google").addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked");  
+    })
+
+
+    document.querySelector("#images").addEventListener("click", (e) => {
+        //console.log(e.target.parentNode);
+        //let removeIt = e.target.parentNode;
+        // removeIt.remove();
+        //removeIt.parentNode.removeChild(removeIt);
+
+        console.log(e.target.tagName);
+        if(e.target.tagName === "IMG") {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            
+
+        }
+        
+    }, false)
     
 
     // type, timestamp, defaultPrevented
@@ -41,7 +77,7 @@
     // ClientX,Y,Z,   screenX,Y
     // altkey, ctrlkey, shiftkey, keycode
 
-    //EventPropogation --> Capturing & Bubling --> first inside, then outside elements
+    //EventPropogation --> Capturing --> (true) top to bottom  & Bubling --> first inside, then outside elements
     //fixed by true (false by default)
 
 
