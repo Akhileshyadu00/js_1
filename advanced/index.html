@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chai Aur Javascript</h2>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+
+</body>
+<script>
+
+   // const date = (str) => {
+       // console.log(str, Date.now());
+    //}
+    //const intervalId =  setInterval(date, 2000, "Akhilesh");
+   // clearInterval(intervalId)
+
+
+   // setInterval(() => {
+     //    const start = document.querySelector("#Start").addEventListener("click", (str) => {
+         //   console.log(str, Date.now());
+    //    } ) 
+   // }, 2000);
+
+    //const start = document.querySelector("#Start").addEventListener("click", (str) => {
+     //  console.log(str, Date.now());
+   // } )
+    //setInterval(start, 2000, "Akhilesh");
+
+   
+
+//document.querySelector("#Start").addEventListener("click", () => {
+    
+  //  const start = (str) => {
+  //   console.log(str, Date.now());
+    //};
+    //setInterval(() => start("Akhilesh"), 2000);
+  //const interval = setInterval(() => start("Akhilesh"), 2000);
+  //clearInterval(interval)
+//});
+
+//document.querySelector("#Stop").addEventListener("click", () => {
+
+  //  const start = (str) => {
+  //    console.log(str, Date.now());
+  //  };
+
+   // const interval = setInterval(() => start("Akhilesh"), 2000);
+   // clearInterval(interval)
+//})
+
+
+
+let interval; // Store interval reference globally
+
+document.querySelector("#Start").addEventListener("click", () => {
+    if (!interval) { // Prevent multiple intervals from stacking
+        interval = setInterval(() => {
+            console.log("Akhilesh", Date.now());
+        }, 2000);
+    }
+});
+
+document.querySelector("#Stop").addEventListener("click", () => {
+    clearInterval(interval); // Stop the interval
+    interval = null; // Reset interval reference
+});
+
+
+
+
+</script>
+
+</html>
