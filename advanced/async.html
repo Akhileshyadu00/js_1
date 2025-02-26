@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await</title>
+</head>
+<body>
+    <h2>Async-await</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+   // document.querySelector("h2").innerHTML = "Best JS Series"
+
+
+    setTimeout(() => { 
+        //console.log("Akhilesh");
+       //const changeText =  document.querySelector("h2").innerHTML = "Best JS Series"
+        
+    }, 2000);
+
+    const changeMe = setTimeout(() => {
+            document.querySelector("h2").innerHTML = "Best JS Series"
+    }, 2000);
+    //clearTimeout(changeMe)
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearTimeout(changeMe)
+        console.log("Stooped");
+        
+    })
+
+
+
+
+
+
+
+    //setInterval(() => {
+    //    console.log("Akhilesh");
+    //}, 2000);
+</script>
+</html>
