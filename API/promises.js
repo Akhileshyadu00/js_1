@@ -69,8 +69,8 @@ promise4
 
 const promise5 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        //let error = true;
-        let error = false;
+        let error = true;
+        //let error = false;
         if(!error) {
             resolve({
                 userName: "Javascript",
@@ -82,5 +82,14 @@ const promise5 = new Promise((resolve, reject) => {
     }, 2000);
 })
 
+async function consume5() {
 
+    try {
+        const response = await promise5;
+        console.log(response);
+    } catch (error) {
+        console.log(error);   
+    }
+}
+consume5()
 
