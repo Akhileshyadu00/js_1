@@ -20,5 +20,48 @@ new Promise((resolve, reject) => {
 })
 
 const promise3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+
+        resolve({
+            userName: "Chai",
+            email: "chai@gmail.com"
+        });
+        
+    }, 2000);
+})
+
+promise3.then((user) => {
+    console.log(user);
     
 })
+
+const promise4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        //let error = true;
+        let error = false;
+        if(!error) {
+            resolve({
+                userName: "Akhilesh",
+                password: "abc@123"
+            })
+        }else {
+            reject("Error: Spmeting went wrong");
+        }
+    }, 2000);
+})
+
+promise4
+.then((user) => {
+    console.log(user);
+    return user.userName;
+    
+})
+.then((userName) => {       //chaining
+    console.log(userName);
+    
+})
+.catch((err) => {
+    console.log(err);
+    
+})
+
